@@ -415,6 +415,66 @@ img{{max-width:100%;height:auto;display:block;}}
     color:var(--blue);
 }}
 
+/* ─── HERO CTA ─── */
+.hero-cta {{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-top:32px;
+    padding:16px 20px;
+    background:var(--warm);
+    border:1px solid var(--rule);
+    border-radius:6px;
+    text-decoration:none;
+    color:var(--ink);
+    transition:transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    max-width:480px;
+}}
+.hero-cta:hover {{
+    transform:translateY(-2px);
+    box-shadow:0 8px 24px rgba(0,0,0,0.08);
+    border-color:var(--blue);
+}}
+.hero-cta__left {{
+    flex:1;
+    min-width:0;
+}}
+.hero-cta__label {{
+    display:block;
+    font-family:var(--sans);
+    font-size:clamp(0.9rem,1.2vw,1.05rem);
+    font-weight:600;
+    color:var(--blue);
+    margin-bottom:2px;
+}}
+.hero-cta__desc {{
+    display:block;
+    font-size:clamp(0.7rem,0.9vw,0.8rem);
+    color:var(--ink3);
+}}
+.hero-cta__preview {{
+    display:flex;
+    gap:4px;
+    flex-shrink:0;
+}}
+.hero-cta__preview img {{
+    width:56px;
+    height:40px;
+    object-fit:cover;
+    border-radius:3px;
+    border:1px solid var(--rule);
+}}
+.hero-cta__arrow {{
+    flex-shrink:0;
+    color:var(--blue);
+    opacity:0.5;
+    transition:opacity 0.2s, transform 0.2s;
+}}
+.hero-cta:hover .hero-cta__arrow {{
+    opacity:1;
+    transform:translateX(4px);
+}}
+
 /* ─── CHART FRAME ─── */
 .chart {{ border:1px solid var(--rule); border-radius:4px; overflow:hidden; }}
 .chart img {{ width:100%; }}
@@ -477,7 +537,22 @@ img{{max-width:100%;height:auto;display:block;}}
             <p class="label">Strategic Recommendation</p>
             <h1 class="headline">When should a brand use a <em>virtual influencer</em>?</h1>
             <p class="subline">A data-driven playbook from a controlled experiment (N=83) and analysis of the $6B virtual influencer market.</p>
-            <div style="margin-top:48px;display:flex;gap:40px;">
+
+            <!-- CTA + Portfolio Preview -->
+            <a href="../portfolio/index.html" target="_blank" class="hero-cta">
+                <div class="hero-cta__left">
+                    <span class="hero-cta__label">Full Research Portfolio</span>
+                    <span class="hero-cta__desc">24 analyses &middot; 12 findings &middot; 11 charts &middot; Complete data</span>
+                </div>
+                <div class="hero-cta__preview">
+                    <img src="{C['grouped_bar_dvs']}" alt="Preview">
+                    <img src="{C['forest_plot']}" alt="Preview">
+                    <img src="{C['mediation_diagram']}" alt="Preview">
+                </div>
+                <svg class="hero-cta__arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+
+            <div style="margin-top:32px;display:flex;gap:40px;">
                 <div><p style="font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink3);margin-bottom:2px;">Prepared by</p><p style="font-size:1rem;">Bella Kang</p></div>
                 <div><p style="font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink3);margin-bottom:2px;">Date</p><p style="font-size:1rem;">March 2026</p></div>
             </div>

@@ -1124,6 +1124,17 @@ footer {{
                     <div class="hero__stat-label">Trust gap</div>
                 </div>
             </div>
+            <a href="../ghost-deck/index.html" target="_blank" style="
+                display:inline-flex; align-items:center; gap:12px;
+                margin-top:var(--s6); padding:14px 24px;
+                background:var(--accent); color:white;
+                font-family:var(--sans); font-size:0.9rem; font-weight:500;
+                border-radius:6px; text-decoration:none;
+                transition:transform 0.2s, box-shadow 0.2s;
+            " onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(180,77,45,0.25)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+                Strategy Deck &mdash; 9-slide executive summary
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
         </div>
         <div class="hero__figure">
             {'<img src="' + fig_data.get("forest_plot","") + '" alt="Effect Size Forest Plot">' if fig_data.get("forest_plot") else ''}
